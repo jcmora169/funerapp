@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class FunerappLoguin
 
     '''<summary>
+    '''Control ImgLogo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ImgLogo As Global.System.Web.UI.WebControls.Image
+
+    '''<summary>
     '''Control LbUsuario.
     '''</summary>
     '''<remarks>
