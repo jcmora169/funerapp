@@ -15,7 +15,7 @@
 
           <div class="form-group">
                     <div class="col-sm-10">
-                        <asp:Image ID="ImgLogo" runat="server" ImageUrl="~/imagenes/LOGO.png" Height="174px" Width="324px" />
+                        <asp:Image ID="ImgLogo" runat="server" ImageUrl="~/imagenes/LOGO.png" Height="174px" Width="324px" CssClass="rounded-circle" />
                     </div>
                 </div>
         <div class="row">
@@ -43,9 +43,8 @@
                     <div class="col-12">
                         <asp:Button ID="BtnIniciar" runat="server" Text="Iniciar" CssClass="form-control btn-primary"  Width="328px"/>
                     </div>
-                     
-
                 </div>
+                <asp:Label ID="LbError" runat="server" Text=""></asp:Label>
         
         
     </form>
