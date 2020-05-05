@@ -143,6 +143,7 @@
   <ItemGroup>
     <Content Include="CSS\estilos.css" />
     <Content Include="FunerappLoguin.aspx" />
+    <Content Include="FunerappMenuCordinador.aspx" />
     <Content Include="imagenes\LOGO.png" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -152,6 +153,13 @@
     </Compile>
     <Compile Include="FunerappLoguin.aspx.vb">
       <DependentUpon>FunerappLoguin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FunerappMenuCordinador.aspx.designer.vb">
+      <DependentUpon>FunerappMenuCordinador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FunerappMenuCordinador.aspx.vb">
+      <DependentUpon>FunerappMenuCordinador.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
