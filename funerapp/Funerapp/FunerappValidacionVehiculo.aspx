@@ -12,6 +12,7 @@
         <div>
             <h2>PRUEBA</h2>
             <h1>pruebas juan</h1>
+            <h1>mas pruebas</h1>
         </div>
     </form>
 </body>
