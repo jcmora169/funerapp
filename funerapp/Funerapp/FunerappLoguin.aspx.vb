@@ -14,6 +14,7 @@ Public Class FunerappLoguin
         Dim contraseña As String
         contraseña = TxtContraseña.Text
         iniciarSesion(usuario, contraseña)
+
     End Sub
 
     Private Sub iniciarSesion(usuario As String, contraseña As String)
@@ -30,6 +31,7 @@ Public Class FunerappLoguin
             If resultado.Read() Then
                 If resultado.Item("usuario").ToString = usuario And resultado.Item("contrasena").ToString = contraseña Then
                     MsgBox("Ingreso exitoso.", MsgBoxStyle.Information, "Confirmar")
+                    Response.Redirect("FunerappMenuCordinador.aspx")
                 Else
                     MsgBox("La contraseña es incorrecta.", MsgBoxStyle.Critical, "Confirmar")
                 End If

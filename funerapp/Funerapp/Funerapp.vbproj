@@ -143,13 +143,26 @@
   <ItemGroup>
     <Content Include="CSS\estilos.css" />
     <Content Include="CSS\estilosKNT.css" />
+    <Content Include="FunerappInicio.aspx" />
     <Content Include="FunerappLoguin.aspx" />
     <Content Include="FunerappMenuCordinador.aspx" />
     <Content Include="FunerappValidacionVehiculo.aspx" />
+    <Content Include="imagenes\502774-funeraria-la-alpujarra-banner.jpg" />
+    <Content Include="imagenes\aplicación-web-y-de-escritorio-01.jpg" />
+    <Content Include="imagenes\funergal.jpg" />
+    <Content Include="imagenes\logo-fundacion-para-la-educacion-superior-san-mateo.png" />
     <Content Include="imagenes\LOGO.png" />
+    <Content Include="imagenes\Seguro-vehiculos-funsegur.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FunerappInicio.aspx.designer.vb">
+      <DependentUpon>FunerappInicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FunerappInicio.aspx.vb">
+      <DependentUpon>FunerappInicio.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="FunerappLoguin.aspx.designer.vb">
       <DependentUpon>FunerappLoguin.aspx</DependentUpon>
     </Compile>
