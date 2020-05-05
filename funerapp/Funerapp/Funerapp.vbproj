@@ -145,6 +145,7 @@
     <Content Include="CSS\estilosKNT.css" />
     <Content Include="FunerappLoguin.aspx" />
     <Content Include="FunerappValidacionVehiculo.aspx" />
+    <Content Include="FunerappValidacionVehiculo.aspx" />
     <Content Include="FunerappMenuCordinador.aspx" />
     <Content Include="imagenes\LOGO.png" />
     <Content Include="Web.config" />
@@ -155,6 +156,13 @@
     </Compile>
     <Compile Include="FunerappLoguin.aspx.vb">
       <DependentUpon>FunerappLoguin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FunerappValidacionVehiculo.aspx.designer.vb">
+      <DependentUpon>FunerappValidacionVehiculo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FunerappValidacionVehiculo.aspx.vb">
+      <DependentUpon>FunerappValidacionVehiculo.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="FunerappValidacionVehiculo.aspx.designer.vb">
