@@ -146,6 +146,7 @@
     <Content Include="FunerappInicio.aspx" />
     <Content Include="FunerappLoguin.aspx" />
     <Content Include="FunerappMenuCordinador.aspx" />
+    <Content Include="FunerappValidacionConductor.aspx" />
     <Content Include="FunerappValidacionVehiculo.aspx" />
     <Content Include="imagenes\502774-funeraria-la-alpujarra-banner.jpg" />
     <Content Include="imagenes\aplicación-web-y-de-escritorio-01.jpg" />
@@ -175,6 +176,13 @@
     </Compile>
     <Compile Include="FunerappMenuCordinador.aspx.vb">
       <DependentUpon>FunerappMenuCordinador.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FunerappValidacionConductor.aspx.designer.vb">
+      <DependentUpon>FunerappValidacionConductor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FunerappValidacionConductor.aspx.vb">
+      <DependentUpon>FunerappValidacionConductor.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="FunerappValidacionVehiculo.aspx.designer.vb">
