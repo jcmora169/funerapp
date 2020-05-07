@@ -43,6 +43,23 @@ Public Class FunerappValidacionConductor
             Me.Error.Text = ex.Message
         End Try
     End Sub
+    Protected Sub BtnCargarValidaciones_Click(sender As Object, e As EventArgs) Handles BtnCargarValidaciones.Click
+        CargarValidaciones()
+    End Sub
+
+    Private Sub CargarValidaciones()
+        If Me.ChkValidacionAlcoholemia.Checked And Me.ChkValidacionInsomnio.Checked Then
+            If Me.DplAprobadoAlcoholemia.SelectedValue = "Aprobado" And Me.DplAprobadoInsomnio.SelectedValue = "Aprobado" Then
+                MsgBox("El usario aprobo todas las validaciones.", MsgBoxStyle.Information, "Confirmar")
+            Else
+                MsgBox("El usario no aprobo las validaciones.", MsgBoxStyle.Critical, "Confirmar")
+            End If
+        Else
+            MsgBox("Debe chequear las validaciones activas.", MsgBoxStyle.Exclamation, "Confirmar")
+        End If
+
+
+    End Sub
 
 
 End Class
