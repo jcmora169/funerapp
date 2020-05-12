@@ -35,7 +35,7 @@ Public Class FunerappLoguin
                 If resultado.Item("usuario").ToString = usuario And resultado.Item("contrasena").ToString = contraseña Then
                     MsgBox("Ingreso exitoso.", MsgBoxStyle.Information, "Confirmar")
                     Response.Redirect("FunerappMenuCordinador.aspx?parametro=" + TxtUsuario.Text)
-                    Response.("FunerappValidacionConductor.aspx?parametro=" + TxtUsuario.Text)
+                    Response.Redirect("FunerappValidacionConductor.aspx?parametro=" + TxtUsuario.Text)
                 Else
                     MsgBox("La contraseña es incorrecta.", MsgBoxStyle.Critical, "Confirmar")
                 End If

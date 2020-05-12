@@ -148,6 +148,7 @@
     <Content Include="FunerappMenuCordinador.aspx" />
     <Content Include="FunerappValidacionConductor.aspx" />
     <Content Include="FunerappValidacionVehiculo.aspx" />
+    <Content Include="FunnerappValidacionVehiculo2.aspx" />
     <Content Include="imagenes\502774-funeraria-la-alpujarra-banner.jpg" />
     <Content Include="imagenes\aplicación-web-y-de-escritorio-01.jpg" />
     <Content Include="imagenes\funergal.jpg" />
@@ -190,6 +191,13 @@
     </Compile>
     <Compile Include="FunerappValidacionVehiculo.aspx.vb">
       <DependentUpon>FunerappValidacionVehiculo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FunnerappValidacionVehiculo2.aspx.designer.vb">
+      <DependentUpon>FunnerappValidacionVehiculo2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FunnerappValidacionVehiculo2.aspx.vb">
+      <DependentUpon>FunnerappValidacionVehiculo2.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
