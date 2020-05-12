@@ -33,7 +33,9 @@
       <li><a href="#">Informes</a></li>      
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="FunerappInicio.aspx"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="FunerappInicio.aspx">
+          <asp:Label ID="LbUser" runat="server" ForeColor="#999999"></asp:Label> <span class="glyphicon glyphicon-user"></span> 
+           Sign Up</a></li>
     </ul>
   </div>
 </nav>  

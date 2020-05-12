@@ -1,8 +1,14 @@
-﻿Public Class FunerappMenuCordinador
+﻿Imports System.Web.DynamicData
+Imports Google.Protobuf.WellKnownTypes
+
+Public Class FunerappMenuCordinador
     Inherits System.Web.UI.Page
 
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+    Public Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
+        LbUser.Text = Request.Params("parametro")
 
     End Sub
+
 
 End Class

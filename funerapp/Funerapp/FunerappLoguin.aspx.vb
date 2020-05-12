@@ -3,11 +3,11 @@
 Public Class FunerappLoguin
     Inherits System.Web.UI.Page
 
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+    Public Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Session("Conectar") = System.Web.Configuration.WebConfigurationManager.AppSettings("ConectarMySql").ToString
     End Sub
 
-    Protected Sub BtnIniciar_Click(sender As Object, e As EventArgs) Handles BtnIniciar.Click
+    Public Sub BtnIniciar_Click(sender As Object, e As EventArgs) Handles BtnIniciar.Click
 
         Dim usuario As String
         usuario = TxtUsuario.Text
@@ -15,9 +15,12 @@ Public Class FunerappLoguin
         contraseña = TxtContraseña.Text
         iniciarSesion(usuario, contraseña)
 
+
+
+
     End Sub
 
-    Private Sub iniciarSesion(usuario As String, contraseña As String)
+    Public Sub iniciarSesion(usuario As String, contraseña As String)
         Try
             Dim cnn As New MySqlConnection()
             cnn.ConnectionString = Session("Conectar")
@@ -31,7 +34,8 @@ Public Class FunerappLoguin
             If resultado.Read() Then
                 If resultado.Item("usuario").ToString = usuario And resultado.Item("contrasena").ToString = contraseña Then
                     MsgBox("Ingreso exitoso.", MsgBoxStyle.Information, "Confirmar")
-                    Response.Redirect("FunerappMenuCordinador.aspx")
+                    Response.Redirect("FunerappMenuCordinador.aspx?parametro=" + TxtUsuario.Text)
+                    Response.("FunerappValidacionConductor.aspx?parametro=" + TxtUsuario.Text)
                 Else
                     MsgBox("La contraseña es incorrecta.", MsgBoxStyle.Critical, "Confirmar")
                 End If

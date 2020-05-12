@@ -18,8 +18,9 @@ Public Class FunerappValidacionConductor
 
     Private Sub consultarUsuario(usuario As String)
         Try
-            Dim cnn As New MySqlConnection()
-            cnn.ConnectionString = Session("Conectar")
+            Dim cnn As New MySqlConnection With {
+                .ConnectionString = Session("Conectar")
+            }
             If cnn.State = ConnectionState.Closed Then
                 cnn.Open()
             End If
@@ -50,6 +51,34 @@ Public Class FunerappValidacionConductor
     Private Sub CargarValidaciones()
         If Me.ChkValidacionAlcoholemia.Checked And Me.ChkValidacionInsomnio.Checked Then
             If Me.DplAprobadoAlcoholemia.SelectedValue = "Aprobado" And Me.DplAprobadoInsomnio.SelectedValue = "Aprobado" Then
+                Dim usuarioCv As String
+                usuarioCv = TxtUsuario.Text
+
+                Try
+                    Dim cnn As New MySqlConnection With {
+                        .ConnectionString = Session("Conectar")
+                    }
+                    If cnn.State = ConnectionState.Closed Then
+                        cnn.Open()
+                    End If
+
+                    Dim consultaUsu As New MySqlCommand("SELECT * FROM usuarios where usuario = @USUARIO", cnn)
+                    consultaUsu.Parameters.Add(New MySqlParameter("@USUARIO", usuarioCv))
+                    Dim resultadoUsuario As MySqlDataReader
+                    resultadoUsuario = consultaUsu.ExecuteReader
+                    If resultadoUsuario.Read() Then
+
+                        insertarPrimeraValidacion(resultadoUsuario.Item("id_usuario"))
+                        insertarSegundaValidacion(resultadoUsuario.Item("id_usuario"))
+                    End If
+                    If cnn.State = ConnectionState.Open Then
+                        cnn.Close()
+                    End If
+
+                Catch ex As Exception
+                    Me.Error.Text = ex.Message
+                End Try
+
                 MsgBox("El usario aprobo todas las validaciones.", MsgBoxStyle.Information, "Confirmar")
             Else
                 MsgBox("El usario no aprobo las validaciones.", MsgBoxStyle.Critical, "Confirmar")
@@ -59,6 +88,54 @@ Public Class FunerappValidacionConductor
         End If
 
 
+    End Sub
+
+    Private Sub insertarPrimeraValidacion(usuario As String)
+        Dim fechaActual As Date = Date.Now
+        Try
+            Dim cnn As New MySqlConnection With {
+                        .ConnectionString = Session("Conectar")
+                    }
+            If cnn.State = ConnectionState.Closed Then
+                cnn.Open()
+            End If
+            Dim cmd As New MySqlCommand("INSERT INTO validaciones_us (id_usuario, id_validacion, calificacion, fecha_validacion) VALUES( @Id_USUARIO, @ID_VALIDACION, @CALIFICACION, @FECHA_VALIDACION)", cnn)
+            cmd.Parameters.Add(New MySqlParameter("@Id_USUARIO", usuario))
+            cmd.Parameters.Add(New MySqlParameter("@ID_VALIDACION", 1))
+            cmd.Parameters.Add(New MySqlParameter("@CALIFICACION", Me.DplAprobadoAlcoholemia.SelectedValue))
+            cmd.Parameters.Add(New MySqlParameter("@FECHA_VALIDACION", fechaActual))
+            cmd.ExecuteNonQuery()
+
+            If cnn.State = ConnectionState.Open Then
+                cnn.Close()
+            End If
+        Catch ex As Exception
+            Me.Error.Text = ex.Message
+        End Try
+    End Sub
+
+    Private Sub insertarSegundaValidacion(usuario As String)
+        Dim fechaActual As Date = Date.Now
+        Try
+            Dim cnn As New MySqlConnection With {
+                        .ConnectionString = Session("Conectar")
+                    }
+            If cnn.State = ConnectionState.Closed Then
+                cnn.Open()
+            End If
+            Dim cmd2 As New MySqlCommand("INSERT INTO validaciones_us ( id_usuario, id_validacion, calificacion, fecha_validacion) VALUES( @Id_USUARIO, @ID_VALIDACION, @CALIFICACION, @FECHA_VALIDACION)", cnn)
+            cmd2.Parameters.Add(New MySqlParameter("@Id_USUARIO", usuario))
+            cmd2.Parameters.Add(New MySqlParameter("@ID_VALIDACION", 2))
+            cmd2.Parameters.Add(New MySqlParameter("@CALIFICACION", Me.DplAprobadoInsomnio.SelectedValue))
+            cmd2.Parameters.Add(New MySqlParameter("@FECHA_VALIDACION", fechaActual))
+            cmd2.ExecuteNonQuery()
+
+            If cnn.State = ConnectionState.Open Then
+                cnn.Close()
+            End If
+        Catch ex As Exception
+            Me.Error.Text = ex.Message
+        End Try
     End Sub
 
 
