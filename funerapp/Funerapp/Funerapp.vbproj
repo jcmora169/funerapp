@@ -144,13 +144,16 @@
     <Content Include="CSS\estilos.css" />
     <Content Include="CSS\estilosKNT.css" />
     <Content Include="FunerappInicio.aspx" />
+    <Content Include="FunerappInsercionVehiculo.aspx" />
     <Content Include="FunerappLoguin.aspx" />
     <Content Include="FunerappMenuCordinador.aspx" />
     <Content Include="FunerappValidacionConductor.aspx" />
     <Content Include="FunerappValidacionVehiculo.aspx" />
     <Content Include="FunnerappValidacionVehiculo2.aspx" />
     <Content Include="imagenes\502774-funeraria-la-alpujarra-banner.jpg" />
+    <Content Include="imagenes\adjuntar.png" />
     <Content Include="imagenes\aplicación-web-y-de-escritorio-01.jpg" />
+    <Content Include="imagenes\Calendario.png" />
     <Content Include="imagenes\funergal.jpg" />
     <Content Include="imagenes\logo-fundacion-para-la-educacion-superior-san-mateo.png" />
     <Content Include="imagenes\LOGO.png" />
@@ -163,6 +166,13 @@
     </Compile>
     <Compile Include="FunerappInicio.aspx.vb">
       <DependentUpon>FunerappInicio.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FunerappInsercionVehiculo.aspx.designer.vb">
+      <DependentUpon>FunerappInsercionVehiculo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FunerappInsercionVehiculo.aspx.vb">
+      <DependentUpon>FunerappInsercionVehiculo.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="FunerappLoguin.aspx.designer.vb">
@@ -245,6 +255,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="imagenes\ImagenesKNT\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

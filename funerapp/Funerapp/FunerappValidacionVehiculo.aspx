@@ -47,21 +47,22 @@
     <div class="col-sm-3"></div>
     <div class="col-sm-6">
         <div class="jumbotron text-center" >
-      
-        <h4>Escoge tu vehiculo</h4><br />
+        
+           
         <asp:DropDownList ID="Listado" runat="server">
         </asp:DropDownList>
         <br />
         <br />
-        <br />
+            <input id="Button1" type="button" value="button" /><br />
         <br />
         <asp:Label ID="Label1" runat="server"></asp:Label>
         <br />
         <br />
         <asp:Button ID="btnRealizarChek" runat="server" Text="Realizar checkList" />
+
         </div>
       </div>
-
+      </div>
       <div class="col-sm-3"></div>
 
     
@@ -70,7 +71,7 @@
     
 
         
- </div>
+
 
 
      </form>

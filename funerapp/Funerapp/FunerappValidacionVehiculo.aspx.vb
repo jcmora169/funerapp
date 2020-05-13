@@ -39,15 +39,7 @@ Public Class FunerappValidacionVehiculo
 
     End Sub
 
-    Protected Sub Listado_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Listado.SelectedIndexChanged
-        txtPlaca.Text = Listado.SelectedValue
 
 
 
-
-    End Sub
-
-    Protected Sub txtPlaca_TextChanged(sender As Object, e As EventArgs) Handles txtPlaca.TextChanged
-
-    End Sub
 End Class
