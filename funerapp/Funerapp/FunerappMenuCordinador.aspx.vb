@@ -6,7 +6,7 @@ Public Class FunerappMenuCordinador
 
     Public Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
-        LbUser.Text = Request.Params("parametro")
+        LbUser.Text = Session("usuarioS")
 
     End Sub
 
