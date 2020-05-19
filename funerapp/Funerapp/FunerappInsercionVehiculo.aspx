@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .auto-style1 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -34,7 +39,7 @@
     </nav>
         
         <div class="container">
-            <div class="row">
+           <div class="row">
                 <div class="col-sm-12">
                     <h1>Registro de Carrozas</h1>
                 </div>
@@ -42,7 +47,7 @@
 
             <div class="row">
               
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                     
                     
                 Marca<br />
@@ -64,7 +69,7 @@
                     
              </div>
 
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 
                     
                 Fecha Vencimiento SOAT<br />
@@ -102,27 +107,55 @@
                 <br />
                 <br />
                 <br />
-                Imagen Vehiculo
-                <asp:Image ID="Image1"  runat="server" ImageUrl="~/imagenes/adjuntar.png" />
+                
+
+                
+             </div>
+
+                <div class="col-sm-3">
+                    Imagen Vehiculo
+                <asp:Image ID="foto"  runat="server" ImageUrl="~/imagenes/adjuntar.png" />
                     <br />
                       <br />
                 Archivo:
-                <asp:FileUpload ID="fuploadimagen" accept=".jpg" runat="server" CssClass="form-control" />
+                <asp:FileUpload ID="fuploadCarroza" accept=".jpg" runat="server" CssClass="form-control" />
+                  
+                <asp:Button ID="btnFoto" runat="server" Text="Visualizar" />
+
+                 <br />
+
+                 <asp:Label ID="LblFoto" runat="server" Text="Label"></asp:Label>
                   
                  <br />
                 <br />
                 <br />
+
+                    </div>
+
+                <div class="col-sm-3">
                 Imagen CheckList
-                <asp:Image ID="Image2"  runat="server" ImageUrl="~/imagenes/adjuntar.png" />
+                <asp:Image ID="check"  runat="server" ImageUrl="~/imagenes/adjuntar.png" />
                     <br />
                       <br />
                 Archivo:
                 <asp:FileUpload ID="fuploadChek" accept=".jpg" runat="server" CssClass="form-control" />
 
-                <asp:Button ID="btnGuardar" runat="server" Text="Guardar Datos" CssClass ="btn btn-success" />  
-             </div>
+                <asp:Button ID="btnCheck" runat="server" Text="Visualizar" />
+                <br />
+                <asp:Label ID="LblCheck" runat="server"></asp:Label>
+
+                <br />
+                <br />
+                    </div>
                 
             </div>
+
+            <div class="row">
+                <div class="auto-style1">
+                      <asp:Button ID="btnGuardar" runat="server" Text="Guardar Datos" CssClass ="btn btn-success" />
+                    </div>
+            </div>
+    </div>
 
 
    
