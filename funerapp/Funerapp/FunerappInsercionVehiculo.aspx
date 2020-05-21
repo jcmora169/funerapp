@@ -10,6 +10,43 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+    <script type="text/javascript">
+
+        function showimagepreview(input) {
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+
+                    document.getElementsByTagName("img")[0].setAttribute("src", e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+
+        }
+        
+
+    </script>
+
+    <script type="text/javascript">
+
+        function showimagepreview1(input) {
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+
+                    document.getElementsByTagName("img")[0].setAttribute("src", e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+            
+        }
+        
+
+    </script>
+    
     <style type="text/css">
         .auto-style1 {
             text-align: center;
@@ -47,7 +84,7 @@
 
             <div class="row">
               
-            <div class="col-sm-3">
+            <div class="col-sm-6">
                     
                     
                 Marca<br />
@@ -69,7 +106,7 @@
                     
              </div>
 
-            <div class="col-sm-3">
+            <div class="col-sm-6">
                 
                     
                 Fecha Vencimiento SOAT<br />
@@ -108,17 +145,31 @@
                 <br />
                 <br />
                 
+                
+                <asp:Image ID="check"  runat="server" ImageUrl="~/imagenes/adjuntar.png" Width="300px" />
+                    <br />
+                      <br />
+                Archivo:
+                <asp:FileUpload ID="fuploadChek" accept=".jpg" runat="server" CssClass="form-control" onchange="showimagepreview1(this)" />
+               
+                <asp:Button ID="btnCheck" runat="server" Text="Visualizar" />
+                <br />
+                <asp:Label ID="LblCheck" runat="server"></asp:Label>
+
+                <br />
+                <br />
 
                 
              </div>
 
-                <div class="col-sm-3">
+              <%--  <div class="col-sm-3">
                     Imagen Vehiculo
                 <asp:Image ID="foto"  runat="server" ImageUrl="~/imagenes/adjuntar.png" />
                     <br />
                       <br />
+
                 Archivo:
-                <asp:FileUpload ID="fuploadCarroza" accept=".jpg" runat="server" CssClass="form-control" />
+                <asp:FileUpload ID="fuploadCarroza" accept=".jpg" runat="server" CssClass="form-control" onchange="showimagepreview(this)" />
                   
                 <asp:Button ID="btnFoto" runat="server" Text="Visualizar" />
 
@@ -130,23 +181,9 @@
                 <br />
                 <br />
 
-                    </div>
+                    </div>--%>
 
-                <div class="col-sm-3">
-                Imagen CheckList
-                <asp:Image ID="check"  runat="server" ImageUrl="~/imagenes/adjuntar.png" />
-                    <br />
-                      <br />
-                Archivo:
-                <asp:FileUpload ID="fuploadChek" accept=".jpg" runat="server" CssClass="form-control" />
-
-                <asp:Button ID="btnCheck" runat="server" Text="Visualizar" />
-                <br />
-                <asp:Label ID="LblCheck" runat="server"></asp:Label>
-
-                <br />
-                <br />
-                    </div>
+               
                 
             </div>
 
@@ -156,9 +193,12 @@
                     </div>
             </div>
     </div>
+      </form>
 
 
-   
-    </form>
+    
+
+
+
 </body>
 </html>

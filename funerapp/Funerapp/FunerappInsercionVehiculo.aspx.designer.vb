@@ -122,42 +122,6 @@ Partial Public Class FunerappInsercionVehiculo
     Protected WithEvents CalendarTecno As Global.System.Web.UI.WebControls.Calendar
 
     '''<summary>
-    '''Control foto.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents foto As Global.System.Web.UI.WebControls.Image
-
-    '''<summary>
-    '''Control fuploadCarroza.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents fuploadCarroza As Global.System.Web.UI.WebControls.FileUpload
-
-    '''<summary>
-    '''Control btnFoto.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents btnFoto As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Control LblFoto.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents LblFoto As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
     '''Control check.
     '''</summary>
     '''<remarks>
