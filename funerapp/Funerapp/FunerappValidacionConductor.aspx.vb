@@ -5,8 +5,7 @@ Public Class FunerappValidacionConductor
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Session("Conectar") = System.Web.Configuration.WebConfigurationManager.AppSettings("ConectarMySql").ToString
-
-
+        LbUser.Text = Session("usuarioS")
 
     End Sub
 
@@ -53,7 +52,6 @@ Public Class FunerappValidacionConductor
             If Me.DplAprobadoAlcoholemia.SelectedValue = "Aprobado" And Me.DplAprobadoInsomnio.SelectedValue = "Aprobado" Then
                 Dim usuarioCv As String
                 usuarioCv = TxtUsuario.Text
-
                 Try
                     Dim cnn As New MySqlConnection With {
                         .ConnectionString = Session("Conectar")
@@ -61,24 +59,20 @@ Public Class FunerappValidacionConductor
                     If cnn.State = ConnectionState.Closed Then
                         cnn.Open()
                     End If
-
                     Dim consultaUsu As New MySqlCommand("SELECT * FROM usuarios where usuario = @USUARIO", cnn)
                     consultaUsu.Parameters.Add(New MySqlParameter("@USUARIO", usuarioCv))
                     Dim resultadoUsuario As MySqlDataReader
                     resultadoUsuario = consultaUsu.ExecuteReader
                     If resultadoUsuario.Read() Then
-
                         insertarPrimeraValidacion(resultadoUsuario.Item("id_usuario"))
                         insertarSegundaValidacion(resultadoUsuario.Item("id_usuario"))
                     End If
                     If cnn.State = ConnectionState.Open Then
                         cnn.Close()
                     End If
-
                 Catch ex As Exception
                     Me.Error.Text = ex.Message
                 End Try
-
                 MsgBox("El usario aprobo todas las validaciones.", MsgBoxStyle.Information, "Confirmar")
             Else
                 MsgBox("El usario no aprobo las validaciones.", MsgBoxStyle.Critical, "Confirmar")
@@ -86,8 +80,6 @@ Public Class FunerappValidacionConductor
         Else
             MsgBox("Debe chequear las validaciones activas.", MsgBoxStyle.Exclamation, "Confirmar")
         End If
-
-
     End Sub
 
     Private Sub insertarPrimeraValidacion(usuario As String)
