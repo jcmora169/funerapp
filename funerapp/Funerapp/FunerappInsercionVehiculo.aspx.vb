@@ -48,7 +48,7 @@ Public Class FunerappInsercionVehiculo
 
     Protected Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Dim marca As String
-        marca = TxtTecnomecanica.Text
+        marca = TxtMarca.Text
 
         Dim referencia As String
         referencia = TxtRefrencia.Text
@@ -56,44 +56,53 @@ Public Class FunerappInsercionVehiculo
         Dim modelo As String
         modelo = TxtModelo.Text
 
-        Dim fechaTecno As String
-        fechaTecno = TxtTecnomecanica.Text
 
-        Dim fechaSoat As Date
-        fechaSoat = TxtSoat.Text
+
+        Dim fechaTec As Date = TxtTecnomecanica.Text
+        Dim fechaFormateadaTec As String
+        fechaFormateadaTec = fechaTec.ToString("yy-MM-dd")
+
+
+
+        Dim fechaSoat As Date = TxtSoat.Text
+        Dim fechaFormateadaSoat As String
+        fechaFormateadaSoat = fechaSoat.ToString("yy-MM-dd")
+
 
         Dim placa As String
         placa = TxtPlaca.Text
 
-        Dim chek As Integer
-        chek = fuploadChek.PostedFile.ContentLength
-        Dim byts(chek - 1) As Byte
-        byts = fuploadChek.FileBytes
+        'Dim chek As Integer
+        'chek = fuploadChek.PostedFile.ContentLength
+        'Dim byts(chek - 1) As Byte
+        'byts = fuploadChek.FileBytes
 
 
 
-        guardarCarroza(marca, referencia, modelo, fechaTecno, fechaSoat, placa, byts)
+        guardarCarroza(marca, referencia, modelo, fechaFormateadaTec, fechaFormateadaSoat, placa)
 
 
 
     End Sub
 
-    Public Sub guardarCarroza(marca As String, referencia As String, modelo As String, fechTec As String, fechSoat As String, placa As String, byts As Byte)
+    Public Sub guardarCarroza(marca As String, referencia As String, modelo As String, fechaFormateadaTec As String, fechaFormateadaSoatt As String, placa As String)
         Try
             Dim cnn As New MySqlConnection()
             cnn.ConnectionString = Session("Conectar")
             If cnn.State = ConnectionState.Closed Then
                 cnn.Open()
             End If
-            Dim consulta As New MySqlCommand("INSERT INTO vehiculos(marca,referencia,modelo,fecha_vencimiento_tecnomecanica,fecha_vencimiento_soat,imgCheckList)
-                                             VALUES(@marca,@referencia, @modelo, @fechTec, @fechSoat, @placa, @byts)", cnn)
+            Dim consulta As New MySqlCommand("INSERT INTO vehiculos(marca,referencia,modelo,fecha_vencimiento_tecnomecanica,fecha_vencimiento_soat, Placa)
+                                             VALUES(@marca,@referencia, @modelo, @fechTec, @fechSoat, @Placa)", cnn)
+
+
             consulta.Parameters.Add(New MySqlParameter("@marca", marca))
             consulta.Parameters.Add(New MySqlParameter("@referencia", referencia))
             consulta.Parameters.Add(New MySqlParameter("@modelo", modelo))
-            consulta.Parameters.Add(New MySqlParameter("@fechTec", fechTec))
-            consulta.Parameters.Add(New MySqlParameter("@fechSoat", fechSoat))
-            consulta.Parameters.Add(New MySqlParameter("@placa", placa))
-            consulta.Parameters.Add(New MySqlParameter("@byts", System.Data.SqlDbType.Bit).Value = byts)
+            consulta.Parameters.Add(New MySqlParameter("@fechTec", fechaFormateadaTec))
+            consulta.Parameters.Add(New MySqlParameter("@fechSoat", fechaFormateadaSoatt))
+            consulta.Parameters.Add(New MySqlParameter("@Placa", placa))
+            'consulta.Parameters.Add(New MySqlParameter("@byts", System.Data.SqlDbType.Bit).Value = byts)
 
             Dim resultado As MySqlDataReader
             resultado = consulta.ExecuteReader
@@ -106,8 +115,8 @@ Public Class FunerappInsercionVehiculo
 
 
 
-            If cnn.State = ConnectionState.Closed Then
-                cnn.Open()
+            If cnn.State = ConnectionState.Open Then
+                cnn.Close()
             End If
 
         Catch ex As Exception

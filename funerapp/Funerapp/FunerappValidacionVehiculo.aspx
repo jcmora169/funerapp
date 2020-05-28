@@ -51,14 +51,95 @@
            
         <asp:DropDownList ID="Listado" runat="server">
         </asp:DropDownList>
+            <br />
+            <br />
+            <br />
+            <br />
+            <asp:Label ID="Label2" runat="server" Text="Fecha Vencimiento SOAT"></asp:Label>
+            <br />
+            <asp:TextBox ID="TxtSoat" runat="server" BackColor="#FF0066" Enabled="False"></asp:TextBox>
+            <br />
+            <br />
+            <asp:Label ID="Label3" runat="server" Text="Fecha Vencimiento Tecnomecanica"></asp:Label>
+            <br />
+            <asp:TextBox ID="TxtTecno" runat="server" BackColor="#66CCFF" Enabled="False"></asp:TextBox>
+            <br />
+            <br />
+            <asp:Button ID="BtnFechas" runat="server" Text="Mostrar Fechas" />
+            <br />
+            <br />
+            <br />
+            <br />
         <br />
         <br />
-            <input id="Button1" type="button" value="button" /><br />
-        <br />
+            <asp:CheckBox ID="ChkSoat" runat="server" Text="SOAT" />
+&nbsp;
+            <asp:DropDownList ID="CalificacionSoat" runat="server">
+                <asp:ListItem Value="Aprobado">Aprobado</asp:ListItem>
+                <asp:ListItem>No Aprobado</asp:ListItem>
+            </asp:DropDownList>
+            <br />
+            <asp:CheckBox ID="ChkTecno" runat="server" Text="Tecnomecanica" />
+&nbsp;
+            <asp:DropDownList ID="CalificacionTecno" runat="server">
+                <asp:ListItem Value="Aprobado">Aprobado</asp:ListItem>
+                <asp:ListItem>No Aprobado</asp:ListItem>
+            </asp:DropDownList>
+            <br />
+            <asp:CheckBox ID="ChkLucesDel" runat="server" Text="Luces Delanteras" />
+&nbsp;
+            <asp:DropDownList ID="CalificacionLucesDel" runat="server">
+                <asp:ListItem Value="Aprobado">Aprobado</asp:ListItem>
+                <asp:ListItem>No Aprobado</asp:ListItem>
+            </asp:DropDownList>
+            <br />
+            <asp:CheckBox ID="ChkLucesTra" runat="server" Text="Luces Traseras" />
+&nbsp;
+            <asp:DropDownList ID="CalificacionLucesTras" runat="server">
+                <asp:ListItem Value="Aprobado">Aprobado</asp:ListItem>
+                <asp:ListItem>No Aprobado</asp:ListItem>
+            </asp:DropDownList>
+            <br />
+            <asp:CheckBox ID="ChkFugas" runat="server" Text="Sin Fugas de aceite " />
+&nbsp;<asp:DropDownList ID="CalificacionFugas" runat="server">
+                <asp:ListItem Value="Aprobado">Aprobado</asp:ListItem>
+                <asp:ListItem>No Aprobado</asp:ListItem>
+            </asp:DropDownList>
+            <br />
+            <asp:CheckBox ID="ChkLlantas" runat="server" Text="Llantas" />
+&nbsp;
+            <asp:DropDownList ID="CalificacionLlantas" runat="server">
+                <asp:ListItem Value="Aprobado">Aprobado</asp:ListItem>
+                <asp:ListItem>No Aprobado</asp:ListItem>
+            </asp:DropDownList>
+            <br />
+            <asp:CheckBox ID="ChkCamilla" runat="server" Text="Camilla" />
+&nbsp;
+            <asp:DropDownList ID="CalificacionCamilla" runat="server">
+                <asp:ListItem Value="Aprobado">Aprobado</asp:ListItem>
+                <asp:ListItem>No Aprobado</asp:ListItem>
+            </asp:DropDownList>
+            <br />
+            <asp:CheckBox ID="ChkGuantes" runat="server" Text="Guantes " />
+&nbsp;<asp:DropDownList ID="CalificacionGuantes" runat="server">
+                <asp:ListItem Value="Aprobado">Aprobado</asp:ListItem>
+                <asp:ListItem>No Aprobado</asp:ListItem>
+            </asp:DropDownList>
+            <br />
+            <asp:CheckBox ID="ChkAntifluido" runat="server" Text="Traje antifluidos" />
+&nbsp;<asp:DropDownList ID="CalificacionAntifluido" runat="server">
+                <asp:ListItem Value="Aprobado">Aprobado</asp:ListItem>
+                <asp:ListItem>No Aprobado</asp:ListItem>
+            </asp:DropDownList>
+            <br />
+&nbsp;
+            <br />
         <asp:Label ID="Label1" runat="server"></asp:Label>
         <br />
+            <asp:Label ID="Error" runat="server" Text="Label"></asp:Label>
         <br />
-        <asp:Button ID="btnRealizarChek" runat="server" Text="Realizar checkList" />
+        <asp:Button ID="btnRealizarChek" runat="server" Text="Cargar CheckList" />
+
 
         </div>
       </div>
@@ -66,7 +147,7 @@
       <div class="col-sm-3"></div>
 
     
-  </div>
+
 
     
 

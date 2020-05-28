@@ -73,7 +73,17 @@
                             </div>
                       </div>
 
-                     <div class="col-sm-3"></div>
+                     <div class="col-sm-3">
+
+
+                         <asp:TextBox ID="texto" runat="server"></asp:TextBox>
+                         <br />
+                         <asp:Label ID="placatxt" runat="server" Text="Label"></asp:Label>
+                         <br />
+                         <asp:Button ID="Button1" runat="server" Text="Button" />
+
+
+                     </div>
 
     
                 </div>
