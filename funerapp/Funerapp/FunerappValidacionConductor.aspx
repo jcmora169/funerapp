@@ -18,12 +18,7 @@
                 <a class="navbar-brand" href="#">Funerapp</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Validaciones <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Validacion vehiculo</a></li>
-                    </ul>
-                </li>
+                <li class="active"><a href="FunerappMenuCordinador.aspx">Home</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="FunerappInicio.aspx">

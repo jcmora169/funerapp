@@ -1,5 +1,5 @@
 ﻿Imports System.Web.DynamicData
-Imports Google.Protobuf.WellKnownTypes
+
 
 Public Class FunerappMenuCordinador
     Inherits System.Web.UI.Page

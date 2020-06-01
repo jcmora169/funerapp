@@ -1,14 +1,15 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="FunerappMenuCordinador.aspx.vb" Inherits="Funerapp.FunerappMenuCordinador" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="FunerappMenuConductor.aspx.vb" Inherits="Funerapp.FunerappMenuConductor" %>
 
 <!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Menu Principal Cordinador</title><meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Menu Principal Conductor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-inverse">
@@ -20,20 +21,20 @@
                 <li class="active"><a href="#">Home</a></li>
                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Validaciones <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="FunerappValidacionConductor.aspx">Validacion conductor</a></li>
+                        <li><a href="FunerappValidacionVehiculo.aspx">Validacion vehiculo</a></li>
                     </ul>
                 </li>
                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Servicios <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Crear servicios</a></li>
                         <li><a href="#">Listar servicios</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Informes</a></li>
+                
             </ul>
-           <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right">
                 <li><a href="FunerappInicio.aspx">
-                    <asp:Label ID="LbUser" runat="server" ForeColor="#999999"></asp:Label>  <span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <asp:Label ID="LbUser" runat="server" ForeColor="#999999"></asp:Label>
+                    <span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
             </ul>
         </div>
     </nav>
