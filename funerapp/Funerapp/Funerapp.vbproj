@@ -143,6 +143,8 @@
   <ItemGroup>
     <Content Include="CSS\estilos.css" />
     <Content Include="CSS\estilosKNT.css" />
+    <Content Include="FunerappCreacionServicio1.aspx" />
+    <Content Include="FunerappCreacionServicio2.aspx" />
     <Content Include="FunerappInicio.aspx" />
     <Content Include="FunerappInsercionVehiculo.aspx" />
     <Content Include="FunerappLoguin.aspx" />
@@ -163,6 +165,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ComvertirImagen.vb" />
+    <Compile Include="FunerappCreacionServicio1.aspx.designer.vb">
+      <DependentUpon>FunerappCreacionServicio1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FunerappCreacionServicio1.aspx.vb">
+      <DependentUpon>FunerappCreacionServicio1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FunerappCreacionServicio2.aspx.designer.vb">
+      <DependentUpon>FunerappCreacionServicio2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FunerappCreacionServicio2.aspx.vb">
+      <DependentUpon>FunerappCreacionServicio2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="FunerappInicio.aspx.designer.vb">
       <DependentUpon>FunerappInicio.aspx</DependentUpon>
     </Compile>
