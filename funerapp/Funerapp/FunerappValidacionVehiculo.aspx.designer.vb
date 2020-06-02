@@ -256,7 +256,6 @@ Partial Public Class FunerappValidacionVehiculo
     '''</remarks>
     Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
 
-#Disable Warning BC40004 ' El miembro está en conflicto con el miembro del tipo base y se debe declarar como 'Shadows'
     '''<summary>
     '''Control Error.
     '''</summary>
@@ -265,7 +264,42 @@ Partial Public Class FunerappValidacionVehiculo
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents [Error] As Global.System.Web.UI.WebControls.Label
-#Enable Warning BC40004 ' El miembro está en conflicto con el miembro del tipo base y se debe declarar como 'Shadows'
+
+    '''<summary>
+    '''Control foto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents foto As Global.System.Web.UI.WebControls.Image
+
+    '''<summary>
+    '''Control cargaFoto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents cargaFoto As Global.System.Web.UI.WebControls.FileUpload
+
+    '''<summary>
+    '''Control Button1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control rutatxt.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents rutatxt As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Control btnRealizarChek.

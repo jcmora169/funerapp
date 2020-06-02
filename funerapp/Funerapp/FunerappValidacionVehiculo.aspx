@@ -12,6 +12,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     
+    <script type="text/javascript">
+
+        function showimagepreview(input) {
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+
+                    document.getElementsByTagName("img")[0].setAttribute("src", e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+
+        }
+   </script>
+
 
 </head>
 <body>
@@ -22,10 +38,10 @@
                 <a class="navbar-brand" href="#">Funerapp</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a href="FunerappMenuConductor.aspx">Home</a></li>
                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Validaciones <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Validacion vehiculo</a></li>
+                        <li><a href="FunerappValidacionVehiculo.aspx">Validacion vehiculo</a></li>
                     </ul>
                 </li>
             </ul>
@@ -73,62 +89,62 @@
             <br />
         <br />
         <br />
-            <asp:CheckBox ID="ChkSoat" runat="server" Text="SOAT" />
+            <asp:CheckBox ID="ChkSoat" runat="server" Text="SOAT" Enabled="False" />
 &nbsp;
-            <asp:DropDownList ID="CalificacionSoat" runat="server">
+            <asp:DropDownList ID="CalificacionSoat" runat="server" Enabled="False">
                 <asp:ListItem Value="Aprobado">Aprobado</asp:ListItem>
                 <asp:ListItem>No Aprobado</asp:ListItem>
             </asp:DropDownList>
             <br />
-            <asp:CheckBox ID="ChkTecno" runat="server" Text="Tecnomecanica" />
+            <asp:CheckBox ID="ChkTecno" runat="server" Text="Tecnomecanica" Enabled="False" />
 &nbsp;
-            <asp:DropDownList ID="CalificacionTecno" runat="server">
+            <asp:DropDownList ID="CalificacionTecno" runat="server" Enabled="False">
                 <asp:ListItem Value="Aprobado">Aprobado</asp:ListItem>
                 <asp:ListItem>No Aprobado</asp:ListItem>
             </asp:DropDownList>
             <br />
-            <asp:CheckBox ID="ChkLucesDel" runat="server" Text="Luces Delanteras" />
+            <asp:CheckBox ID="ChkLucesDel" runat="server" Text="Luces Delanteras" Enabled="False"/>
+&nbsp;<asp:DropDownList ID="CalificacionLucesDel" runat="server" Enabled="False">
+                <asp:ListItem>Aprobado</asp:ListItem>
+                <asp:ListItem>No Aprobado</asp:ListItem>
+            </asp:DropDownList>
+
+            <br />
+            <asp:CheckBox ID="ChkLucesTra" runat="server" Text="Luces Traseras" Enabled="False" />
 &nbsp;
-            <asp:DropDownList ID="CalificacionLucesDel" runat="server">
+            <asp:DropDownList ID="CalificacionLucesTras" runat="server" Enabled="False">
                 <asp:ListItem Value="Aprobado">Aprobado</asp:ListItem>
                 <asp:ListItem>No Aprobado</asp:ListItem>
             </asp:DropDownList>
             <br />
-            <asp:CheckBox ID="ChkLucesTra" runat="server" Text="Luces Traseras" />
+            <asp:CheckBox ID="ChkFugas" runat="server" Text="Sin Fugas de aceite " Enabled="False"/>
+&nbsp;<asp:DropDownList ID="CalificacionFugas" runat="server" Enabled="False">
+                <asp:ListItem Value="Aprobado">Aprobado</asp:ListItem>
+                <asp:ListItem>No Aprobado</asp:ListItem>
+            </asp:DropDownList>
+            <br />
+            <asp:CheckBox ID="ChkLlantas" runat="server" Text="Llantas" Enabled="False"/>
 &nbsp;
-            <asp:DropDownList ID="CalificacionLucesTras" runat="server">
+            <asp:DropDownList ID="CalificacionLlantas" runat="server" Enabled="False">
                 <asp:ListItem Value="Aprobado">Aprobado</asp:ListItem>
                 <asp:ListItem>No Aprobado</asp:ListItem>
             </asp:DropDownList>
             <br />
-            <asp:CheckBox ID="ChkFugas" runat="server" Text="Sin Fugas de aceite " />
-&nbsp;<asp:DropDownList ID="CalificacionFugas" runat="server">
-                <asp:ListItem Value="Aprobado">Aprobado</asp:ListItem>
-                <asp:ListItem>No Aprobado</asp:ListItem>
-            </asp:DropDownList>
-            <br />
-            <asp:CheckBox ID="ChkLlantas" runat="server" Text="Llantas" />
+            <asp:CheckBox ID="ChkCamilla" runat="server" Text="Camilla" Enabled="False"/>
 &nbsp;
-            <asp:DropDownList ID="CalificacionLlantas" runat="server">
+            <asp:DropDownList ID="CalificacionCamilla" runat="server" Enabled="False">
                 <asp:ListItem Value="Aprobado">Aprobado</asp:ListItem>
                 <asp:ListItem>No Aprobado</asp:ListItem>
             </asp:DropDownList>
             <br />
-            <asp:CheckBox ID="ChkCamilla" runat="server" Text="Camilla" />
-&nbsp;
-            <asp:DropDownList ID="CalificacionCamilla" runat="server">
+            <asp:CheckBox ID="ChkGuantes" runat="server" Text="Guantes " Enabled="False" />
+&nbsp;<asp:DropDownList ID="CalificacionGuantes" runat="server" Enabled="False">
                 <asp:ListItem Value="Aprobado">Aprobado</asp:ListItem>
                 <asp:ListItem>No Aprobado</asp:ListItem>
             </asp:DropDownList>
             <br />
-            <asp:CheckBox ID="ChkGuantes" runat="server" Text="Guantes " />
-&nbsp;<asp:DropDownList ID="CalificacionGuantes" runat="server">
-                <asp:ListItem Value="Aprobado">Aprobado</asp:ListItem>
-                <asp:ListItem>No Aprobado</asp:ListItem>
-            </asp:DropDownList>
-            <br />
-            <asp:CheckBox ID="ChkAntifluido" runat="server" Text="Traje antifluidos" />
-&nbsp;<asp:DropDownList ID="CalificacionAntifluido" runat="server">
+            <asp:CheckBox ID="ChkAntifluido" runat="server" Text="Traje antifluidos" Enabled="False"/>
+&nbsp;<asp:DropDownList ID="CalificacionAntifluido" runat="server" Enabled="False">
                 <asp:ListItem Value="Aprobado">Aprobado</asp:ListItem>
                 <asp:ListItem>No Aprobado</asp:ListItem>
             </asp:DropDownList>
@@ -139,13 +155,26 @@
         <br />
             <asp:Label ID="Error" runat="server" Text="Label"></asp:Label>
         <br />
-        <asp:Button ID="btnRealizarChek" runat="server" Text="Cargar CheckList" />
+            <asp:Image ID="foto" runat="server" />
+          <br />
+          <br />
+          <asp:FileUpload ID="cargaFoto" runat="server" CssClass="form-control" onchange="showimagepreview(this)" Enabled="False"/>
+            <br />
+            <asp:Button ID="Button1" runat="server" Text="Button" />
+
+            <br />
+            <asp:Label ID="rutatxt" runat="server" Text="Label"></asp:Label>
+            <br />
+
+        <asp:Button ID="btnRealizarChek" runat="server" Text="Cargar CheckList" Enabled="False" />
 
 
         </div>
       </div>
       </div>
-      <div class="col-sm-3"></div>
+      <div class="col-sm-3">
+          
+    </div>
 
     
 
