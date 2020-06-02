@@ -147,6 +147,7 @@
     <Content Include="FunerappCreacionServicio2.aspx" />
     <Content Include="FunerappInicio.aspx" />
     <Content Include="FunerappInsercionVehiculo.aspx" />
+    <Content Include="FunerappListadoServiciosConductor.aspx" />
     <Content Include="FunerappListadoServiciosCordinador.aspx" />
     <Content Include="FunerappLoguin.aspx" />
     <Content Include="FunerappMenuConductor.aspx" />
@@ -192,6 +193,13 @@
     </Compile>
     <Compile Include="FunerappInsercionVehiculo.aspx.vb">
       <DependentUpon>FunerappInsercionVehiculo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FunerappListadoServiciosConductor.aspx.designer.vb">
+      <DependentUpon>FunerappListadoServiciosConductor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FunerappListadoServiciosConductor.aspx.vb">
+      <DependentUpon>FunerappListadoServiciosConductor.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="FunerappListadoServiciosCordinador.aspx.designer.vb">

@@ -5,6 +5,7 @@ Public Class FunerappListadoServiciosCordinador
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Session("Conectar") = System.Web.Configuration.WebConfigurationManager.AppSettings("ConectarMySql").ToString
+        LbUser.Text = Session("usuarioS")
         If Not Page.IsPostBack Then
             llenarGridView()
         End If

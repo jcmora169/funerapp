@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class FunerappListadoServiciosCordinador
+Partial Public Class FunerappListadoServiciosConductor
 
     '''<summary>
     '''Control LbUser.
@@ -67,7 +67,6 @@ Partial Public Class FunerappListadoServiciosCordinador
     '''</remarks>
     Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
 
-#Disable Warning BC40004 ' El miembro está en conflicto con el miembro del tipo base y se debe declarar como 'Shadows'
     '''<summary>
     '''Control Error.
     '''</summary>
@@ -76,5 +75,4 @@ Partial Public Class FunerappListadoServiciosCordinador
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents [Error] As Global.System.Web.UI.WebControls.Label
-#Enable Warning BC40004 ' El miembro está en conflicto con el miembro del tipo base y se debe declarar como 'Shadows'
 End Class

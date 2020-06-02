@@ -31,60 +31,61 @@
         <h2>Listado de servicios</h2>
         <h1></h1>
     </div>
-    <form id="form1" runat="server">    
-    <asp:GridView ID="GvServicios" runat="server" AutoGenerateColumns="false" CssClass="table table-striped table-bordered table-condensed" Height="126px" Width="1490px" BorderStyle="Dashed" HorizontalAlign="Center">
-    <Columns>
-        <asp:BoundField DataField="id_servicio" HeaderText="ID_SERVICIO" SortExpression="id" ItemStyle-HorizontalAlign="Center"  >
-<ItemStyle HorizontalAlign="Center"></ItemStyle>
-        </asp:BoundField>
-        <asp:BoundField DataField="nombres" HeaderText="NOMBRES" SortExpression="nombres" ItemStyle-HorizontalAlign="Center">
-<ItemStyle HorizontalAlign="Center"></ItemStyle>
-        </asp:BoundField>
-        <asp:BoundField DataField="apellidos" HeaderText="APELLIDOS" SortExpression="apellidos" ItemStyle-HorizontalAlign="Center" >
-<ItemStyle HorizontalAlign="Center"></ItemStyle>
-        </asp:BoundField>
-        <asp:BoundField DataField="direccion_origen" HeaderText="DIRECCION_ORIGEN" SortExpression="direccion_origen" ItemStyle-HorizontalAlign="Center" >
-<ItemStyle HorizontalAlign="Center"></ItemStyle>
-        </asp:BoundField>
-        <asp:BoundField DataField="direccion_destino" HeaderText="DIRECCION_DESTINO" SortExpression="direccion_destino" ItemStyle-HorizontalAlign="Center">
-<ItemStyle HorizontalAlign="Center"></ItemStyle>
-        </asp:BoundField>
-        <asp:TemplateField HeaderText="DETALLES" ItemStyle-HorizontalAlign="Center" >
-            <ItemTemplate>
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                    Detalle del servicio
-                </button>
-            </ItemTemplate>
+    <form id="form1" runat="server">
+        <asp:GridView ID="GvServicios" runat="server" AutoGenerateColumns="false" CssClass="table table-striped table-bordered table-condensed" Height="126px" Width="1490px" BorderStyle="Dashed" HorizontalAlign="Center">
+            <Columns>
+                <asp:BoundField DataField="id_servicio" HeaderText="ID_SERVICIO" SortExpression="id" ItemStyle-HorizontalAlign="Center">
+                    <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                </asp:BoundField>
+                <asp:BoundField DataField="nombres" HeaderText="NOMBRES" SortExpression="nombres" ItemStyle-HorizontalAlign="Center">
+                    <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                </asp:BoundField>
+                <asp:BoundField DataField="apellidos" HeaderText="APELLIDOS" SortExpression="apellidos" ItemStyle-HorizontalAlign="Center">
+                    <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                </asp:BoundField>
+                <asp:BoundField DataField="direccion_origen" HeaderText="DIRECCION_ORIGEN" SortExpression="direccion_origen" ItemStyle-HorizontalAlign="Center">
+                    <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                </asp:BoundField>
+                <asp:BoundField DataField="direccion_destino" HeaderText="DIRECCION_DESTINO" SortExpression="direccion_destino" ItemStyle-HorizontalAlign="Center">
+                    <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                </asp:BoundField>
+                <asp:TemplateField HeaderText="DETALLES" ItemStyle-HorizontalAlign="Center">
+                    <ItemTemplate>
+                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                            Detalle del servicio
+                        </button>
+                    </ItemTemplate>
 
-<ItemStyle HorizontalAlign="Center"></ItemStyle>
-        </asp:TemplateField>
-    </Columns>
-        <HeaderStyle HorizontalAlign="Center" />
-</asp:GridView>
+                    <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                </asp:TemplateField>
+            </Columns>
+            <HeaderStyle HorizontalAlign="Center" />
+        </asp:GridView>
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Detalle del servicio</h4>
-      </div>
-      <div class="modal-body">
-          <asp:Label ID="LbEstadoServicio" runat="server" Text="Estado del servicio: "></asp:Label>
-          <br />
-          <asp:Label ID="Label1" runat="server" Text="Servicio asignado: "></asp:Label>
-          <br />
-          <asp:Label ID="Label2" runat="server" Text="Progreso del servicio: "></asp:Label>
-          
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-       
-      </div>
-    </div>
-  </div>
-</div>
- </form>
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Detalle del servicio</h4>
+                    </div>
+                    <div class="modal-body">
+                        <asp:Label ID="LbEstadoServicio" runat="server" Text="Estado del servicio: "></asp:Label>
+                        <br />
+                        <asp:Label ID="Label1" runat="server" Text="Servicio asignado: "></asp:Label>
+                        <br />
+                        <asp:Label ID="Label2" runat="server" Text="Progreso del servicio: "></asp:Label>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
     <div>
-        <asp:Label ID="Error" runat="server" Text=""></asp:Label></div>
+        <asp:Label ID="Error" runat="server" Text=""></asp:Label>
+    </div>
 </body>
 </html>
