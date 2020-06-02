@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class FunerappCreacionServicio2
+Partial Public Class FunerappListadoServiciosCordinador
 
     '''<summary>
     '''Control LbUser.
@@ -23,85 +23,49 @@ Partial Public Class FunerappCreacionServicio2
     Protected WithEvents LbUser As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control DropDownListCiudadOrigen.
+    '''Control form1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DropDownListCiudadOrigen As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Control TxtBarrioOrigen.
+    '''Control GvServicios.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents TxtBarrioOrigen As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents GvServicios As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''Control TxtDireccionOrigen.
+    '''Control LbEstadoServicio.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents TxtDireccionOrigen As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents LbEstadoServicio As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control TxtDetalleUbicacionOrgen.
+    '''Control Label1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents TxtDetalleUbicacionOrgen As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control DropDownListCiudadDestino.
+    '''Control Label2.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DropDownListCiudadDestino As Global.System.Web.UI.WebControls.DropDownList
-
-    '''<summary>
-    '''Control TxtBarrioDestino.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents TxtBarrioDestino As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control TxtDireccionDestino.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents TxtDireccionDestino As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control TxtDetalleUbicacionDestino.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents TxtDetalleUbicacionDestino As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control BtnContinuar.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents BtnContinuar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
 
 #Disable Warning BC40004 ' El miembro está en conflicto con el miembro del tipo base y se debe declarar como 'Shadows'
     '''<summary>

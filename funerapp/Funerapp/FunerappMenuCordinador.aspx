@@ -17,7 +17,7 @@
                 <a class="navbar-brand" href="#">Funerapp</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a href="FunerappMenuCordinador.aspx">Home</a></li>
                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Validaciones <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="FunerappValidacionConductor.aspx">Validacion conductor</a></li>
@@ -26,7 +26,7 @@
                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Servicios <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="FunerappCreacionServicio1.aspx">Crear servicios</a></li>
-                        <li><a href="#">Listar servicios</a></li>
+                        <li><a href="FunerappListadoServiciosCordinador.aspx">Listar servicios</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Informes</a></li>
