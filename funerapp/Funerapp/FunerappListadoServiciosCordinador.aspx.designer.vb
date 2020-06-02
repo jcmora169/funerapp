@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class FunerappCreacionServicio
+Partial Public Class FunerappListadoServiciosCordinador
 
     '''<summary>
     '''Control LbUser.
@@ -23,69 +23,50 @@ Partial Public Class FunerappCreacionServicio
     Protected WithEvents LbUser As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control TxtNombres.
+    '''Control form1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents TxtNombres As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Control TxtApellidos.
+    '''Control GvServicios.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents TxtApellidos As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents GvServicios As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''Control TxtDocumento.
+    '''Control LbEstadoServicio.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents TxtDocumento As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents LbEstadoServicio As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control TxtEdad.
+    '''Control Label1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents TxtEdad As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control DropDownListGenero.
+    '''Control Label2.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DropDownListGenero As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
 
-    '''<summary>
-    '''Control DropDownListTipoMuerte.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents DropDownListTipoMuerte As Global.System.Web.UI.WebControls.DropDownList
-
-    '''<summary>
-    '''Control BtnContinuar.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents BtnContinuar As Global.System.Web.UI.WebControls.Button
-
-#Disable Warning BC40004 ' El miembro está en conflicto con el miembro del tipo base y se debe declarar como 'Shadows'
     '''<summary>
     '''Control Error.
     '''</summary>
@@ -94,5 +75,4 @@ Partial Public Class FunerappCreacionServicio
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents [Error] As Global.System.Web.UI.WebControls.Label
-#Enable Warning BC40004 ' El miembro está en conflicto con el miembro del tipo base y se debe declarar como 'Shadows'
 End Class
