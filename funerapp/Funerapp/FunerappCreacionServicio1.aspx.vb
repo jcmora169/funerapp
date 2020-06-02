@@ -22,6 +22,7 @@ Public Class FunerappCreacionServicio
         Dim tipoMuerteFallecido As Integer
         tipoMuerteFallecido = DropDownListTipoMuerte.SelectedValue
         insertarFallecido(nombresFallecido, apellidosFallecido, documentoFallecido, edadFallecido, generoFallecido, tipoMuerteFallecido)
+        consultarIdFallecido(documentoFallecido)
         Response.Redirect("FunerappCreacionServicio2.aspx")
     End Sub
 
@@ -33,7 +34,6 @@ Public Class FunerappCreacionServicio
             If cnn.State = ConnectionState.Closed Then
                 cnn.Open()
             End If
-
             Dim cmd As New MySqlCommand("INSERT INTO fallecido (documento, nombres, apellidos, edad,genero,id_tipo_muerte) VALUES( @DOCUMENTO, @NOMBRES, @APELLIDOS, @EDAD, @GENERO, @TIPO_MUERTE)", cnn)
             cmd.Parameters.Add(New MySqlParameter("@DOCUMENTO", docuFallecido))
             cmd.Parameters.Add(New MySqlParameter("@NOMBRES", nomFallecido))
@@ -46,15 +46,32 @@ Public Class FunerappCreacionServicio
             If cnn.State = ConnectionState.Open Then
                 cnn.Close()
             End If
-
-
-
-
         Catch ex As Exception
             Me.Error.Text = ex.Message
         End Try
+    End Sub
 
+    Public Sub consultarIdFallecido(docuFallecido As String)
+        Try
+            Dim cnn As New MySqlConnection With {
+               .ConnectionString = Session("Conectar")
+           }
+            If cnn.State = ConnectionState.Closed Then
+                cnn.Open()
+            End If
+            Dim consulta As New MySqlCommand("SELECT id_fallecido FROM fallecido where documento = @DOCUMENTO", cnn)
+            consulta.Parameters.Add(New MySqlParameter("@DOCUMENTO", docuFallecido))
+            Dim resultado As MySqlDataReader
+            resultado = consulta.ExecuteReader
+            If resultado.Read() Then
+                Session("idFallecido") = resultado.Item("id_fallecido")
+            End If
 
-
+            If cnn.State = ConnectionState.Closed Then
+                cnn.Open()
+            End If
+        Catch ex As Exception
+            Me.Error.Text = ex.Message
+        End Try
     End Sub
 End Class
