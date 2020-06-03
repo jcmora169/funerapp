@@ -29,7 +29,12 @@
                         <li><a href="FunerappListadoServiciosCordinador.aspx">Listar servicios</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Informes</a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Informes <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="FunerappInformes.aspx">Informes y reportes</a></li>
+                        
+                    </ul>
+                </li>
             </ul>
            <ul class="nav navbar-nav navbar-right">
                 <li><a href="FunerappInicio.aspx">
