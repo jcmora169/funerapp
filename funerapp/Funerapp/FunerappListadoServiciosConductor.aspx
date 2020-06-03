@@ -18,7 +18,7 @@
                 <a class="navbar-brand" href="#">Funerapp</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="FunerappMenuCordinador.aspx">Home</a></li>
+                <li class="active"><a href="FunerappMenuConductor.aspx">Home</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="FunerappInicio.aspx">

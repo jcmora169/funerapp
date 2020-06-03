@@ -145,6 +145,7 @@
     <Content Include="CSS\estilosKNT.css" />
     <Content Include="FunerappCreacionServicio1.aspx" />
     <Content Include="FunerappCreacionServicio2.aspx" />
+    <Content Include="FunerappInformes.aspx" />
     <Content Include="FunerappInicio.aspx" />
     <Content Include="FunerappInsercionVehiculo.aspx" />
     <Content Include="FunerappListadoServiciosConductor.aspx" />
@@ -160,6 +161,7 @@
     <Content Include="imagenes\aplicación-web-y-de-escritorio-01.jpg" />
     <Content Include="imagenes\Calendario.png" />
     <Content Include="imagenes\funergal.jpg" />
+    <Content Include="imagenes\ImagenesKNT\power-bi-marketing-sample-dashboard.png" />
     <Content Include="imagenes\logo-fundacion-para-la-educacion-superior-san-mateo.png" />
     <Content Include="imagenes\LOGO.png" />
     <Content Include="imagenes\Seguro-vehiculos-funsegur.jpg" />
@@ -179,6 +181,13 @@
     </Compile>
     <Compile Include="FunerappCreacionServicio2.aspx.vb">
       <DependentUpon>FunerappCreacionServicio2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FunerappInformes.aspx.designer.vb">
+      <DependentUpon>FunerappInformes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FunerappInformes.aspx.vb">
+      <DependentUpon>FunerappInformes.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="FunerappInicio.aspx.designer.vb">
@@ -297,9 +306,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="imagenes\ImagenesKNT\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

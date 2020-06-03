@@ -20,7 +20,7 @@ Public Class FunerappListadoServiciosConductor
                 cnn.Open()
             End If
 
-            Dim da As New MySqlDataAdapter("SELECT se.id_servicio AS ID_SERVICIO, es.descripcion AS ESTADO_SERVICIO, fa.nombres AS NOMBRES, fa.apellidos AS APELLIDOS, dt.direccion_origen AS DIRECCION_ORIGEN, dt.direccion_destino AS DIRECCION_DESTINO FROM servicio AS se  INNER JOIN fallecido AS fa ON fa.id_fallecido = se.idfallecido INNER JOIN datos_traslado AS dt ON dt.id_datos_traslado = se.iddatos_traslado INNER JOIN estado AS es ON se.idestado = es.id_estado WHERE se.idestado = 1", cnn)
+            Dim da As New MySqlDataAdapter("SELECT se.id_servicio AS ID_SERVICIO, es.descripcion AS ESTADO_SERVICIO, fa.nombres AS NOMBRES, fa.apellidos AS APELLIDOS, dt.direccion_origen AS DIRECCION_ORIGEN, dt.direccion_destino AS DIRECCION_DESTINO FROM servicio AS se  INNER JOIN fallecido AS fa ON fa.id_fallecido = se.idfallecido INNER JOIN datos_traslado AS dt ON dt.id_datos_traslado = se.iddatos_traslado INNER JOIN estado AS es ON se.idestado = es.id_estado WHERE se.idestado = 1 ", cnn)
             Dim dt As DataTable = New DataTable("ServiciosFallecidos")
             da.Fill(dt)
             Me.GvServicios.DataSource = dt
@@ -40,6 +40,10 @@ Public Class FunerappListadoServiciosConductor
         consultarIdAsginacionVehiculo()
         insertarAsignacionServicio()
         actualizarEstadoServicio()
+        Dim usu As String
+        usu = Session("usuarioS")
+        MsgBox("El servicio fue asignado al usuario: " & usu, MsgBoxStyle.Information, "Confirmar")
+        Response.Redirect("FunerappMenuConductor.aspx")
 
     End Sub
     Public Sub consultarIdAsginacionVehiculo()

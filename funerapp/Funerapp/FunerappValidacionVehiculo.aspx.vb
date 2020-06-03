@@ -6,14 +6,9 @@ Public Class FunerappValidacionVehiculo
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Session("Conectar") = System.Web.Configuration.WebConfigurationManager.AppSettings("ConectarMySql").ToString
         LbUser.Text = Session("usuarioS")
-        rutatxt.Text = LbUser.Text
-
         If Not Page.IsPostBack Then
             iniciarllenadoDropDown()
-
         End If
-
-
     End Sub
 
     Private Sub iniciarllenadoDropDown()
@@ -47,6 +42,7 @@ Public Class FunerappValidacionVehiculo
 
     Protected Sub btnRealizarChek_Click(sender As Object, e As EventArgs) Handles btnRealizarChek.Click
         cargarChecklist()
+        Response.Redirect("FunerappMenuConductor.aspx")
     End Sub
 
     Private Sub cargarChecklist()
@@ -436,7 +432,7 @@ Public Class FunerappValidacionVehiculo
                         MsgBox("LA TECNOMECANICA ESTA VENCIDA", MsgBoxStyle.Critical, "Confirmar")
 
                     Else
-                        MsgBox("LOS DOCUMENTOS ESTAN EN ORDEN, PROSIGA", MsgBoxStyle.Information, "Confirmar")
+                        MsgBox("LOS DOCUMENTOS ESTAN EN ORDEN, PUEDE CONTINUAR", MsgBoxStyle.Information, "Confirmar")
                         habilitar()
 
                     End If
