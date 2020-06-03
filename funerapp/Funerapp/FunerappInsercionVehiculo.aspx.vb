@@ -72,28 +72,28 @@ Public Class FunerappInsercionVehiculo
         Dim placa As String
         placa = TxtPlaca.Text
 
-        'Dim chek As Integer
-        'chek = fuploadChek.PostedFile.ContentLength
-        'Dim byts(chek - 1) As Byte
-        'byts = fuploadChek.FileBytes
+        Dim foto As String = Path.GetDirectoryName(fuploadChek.PostedFile.FileName)
+        LblCheck.Text = foto
 
 
 
-        guardarCarroza(marca, referencia, modelo, fechaFormateadaTec, fechaFormateadaSoat, placa)
+
+
+        guardarCarroza(marca, referencia, modelo, fechaFormateadaTec, fechaFormateadaSoat, placa, foto)
 
 
 
     End Sub
 
-    Public Sub guardarCarroza(marca As String, referencia As String, modelo As String, fechaFormateadaTec As String, fechaFormateadaSoatt As String, placa As String)
+    Public Sub guardarCarroza(marca As String, referencia As String, modelo As String, fechaFormateadaTec As String, fechaFormateadaSoatt As String, placa As String, foto As String)
         Try
             Dim cnn As New MySqlConnection()
             cnn.ConnectionString = Session("Conectar")
             If cnn.State = ConnectionState.Closed Then
                 cnn.Open()
             End If
-            Dim consulta As New MySqlCommand("INSERT INTO vehiculos(marca,referencia,modelo,fecha_vencimiento_tecnomecanica,fecha_vencimiento_soat, Placa)
-                                             VALUES(@marca,@referencia, @modelo, @fechTec, @fechSoat, @Placa)", cnn)
+            Dim consulta As New MySqlCommand("INSERT INTO vehiculos(marca,referencia,modelo,fecha_vencimiento_tecnomecanica,fecha_vencimiento_soat, Placa, rutaFoto)
+                                             VALUES(@marca,@referencia, @modelo, @fechTec, @fechSoat, @Placa, @foto)", cnn)
 
 
             consulta.Parameters.Add(New MySqlParameter("@marca", marca))
@@ -102,6 +102,7 @@ Public Class FunerappInsercionVehiculo
             consulta.Parameters.Add(New MySqlParameter("@fechTec", fechaFormateadaTec))
             consulta.Parameters.Add(New MySqlParameter("@fechSoat", fechaFormateadaSoatt))
             consulta.Parameters.Add(New MySqlParameter("@Placa", placa))
+            consulta.Parameters.Add(New MySqlParameter("@foto", foto))
             'consulta.Parameters.Add(New MySqlParameter("@byts", System.Data.SqlDbType.Bit).Value = byts)
 
             Dim resultado As MySqlDataReader
@@ -185,30 +186,33 @@ Public Class FunerappInsercionVehiculo
     'End Sub
 
     Protected Sub btnCheck_Click(sender As Object, e As EventArgs) Handles btnCheck.Click
-        Dim sExt As String = String.Empty
-        Dim sName As String = String.Empty
-        check.Width = 0
-        check.Width = 0
-        check.ImageUrl = ""
-        If fuploadChek.HasFile Then
-            sName = fuploadChek.PostedFile.FileName
-            sExt = Path.GetExtension(sName)
+        'Dim sExt As String = String.Empty
+        'Dim sName As String = String.Empty
+        'check.Width = 0
+        'check.Width = 0
+        'check.ImageUrl = ""
+        'If fuploadChek.HasFile Then
+        '    sName = fuploadChek.PostedFile.FileName
+        '    sExt = Path.GetExtension(sName)
 
 
 
-            If ValidaExtension(sExt) Then
-                'fuploadChek.SaveAs(MapPath("~/imagenes/" & sName))
-                check.Width = 300
-                check.Width = 300
-                check.ImageUrl = "~/imagenes/" & sName
+        '    If ValidaExtension(sExt) Then
+        '        'fuploadChek.SaveAs(MapPath("~/imagenes/" & sName))
+        '        check.Width = 300
+        '        check.Width = 300
+        '        check.ImageUrl = "~/imagenes/" & sName
 
-                LblCheck.Text = "Se Cargó la Foto"
+        '        LblCheck.Text = "Se Cargó la Foto"
 
-            Else
-                LblCheck.Text = "El archivo no es de tipo imagen"
-            End If
-        Else
-            LblCheck.Text = "Seleccione el archivo que desea subir."
-        End If
+        '    Else
+        '        LblCheck.Text = "El archivo no es de tipo imagen"
+        '    End If
+        'Else
+        '    LblCheck.Text = "Seleccione el archivo que desea subir."
+        'End If
+
+        Dim foto As String = Path.GetDirectoryName(fuploadChek.PostedFile.FileName)
+        LblCheck.Text = foto
     End Sub
 End Class

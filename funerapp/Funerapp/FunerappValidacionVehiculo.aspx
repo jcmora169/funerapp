@@ -12,6 +12,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     
+    
+
+    <script type="text/javascript">
+
+        function showimagepreview1(input) {
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+
+                    document.getElementsByTagName("img")[0].setAttribute("src", e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+            
+        }
+        
+
+    </script>
+
     <script type="text/javascript">
 
         function showimagepreview(input) {
@@ -171,6 +191,14 @@
 
         </div>
       </div>
+      </div>
+      <div class="col-sm-3">
+          <br />
+          <asp:Image ID="Image1" runat="server" ImageUrl="~/imagenes/adjuntar.png" Width="200px"  />
+          <br />
+          <br />
+          <asp:FileUpload ID="fuploadChek" runat="server" accept=".jpg" CssClass="form-control" onchange="showimagepreview1(this)" />
+    </div>
       </div>
       <div class="col-sm-3">
           

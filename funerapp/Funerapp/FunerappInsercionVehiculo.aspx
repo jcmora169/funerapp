@@ -146,7 +146,7 @@
                 <br />
                 
                 
-                <asp:Image ID="check"  runat="server" ImageUrl="~/imagenes/adjuntar.png" Width="300px" />
+                <asp:Image ID="check"  runat="server" ImageUrl="~/imagenes/adjuntar.png" Width="200px" />
                     <br />
                       <br />
                 Archivo:
